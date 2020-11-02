@@ -1,0 +1,330 @@
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --title-fonts: 'Roboto', sans-serif;
+    --logo-fonts: 'Krona One', sans-serif;
+    --para-fonts: 'Open Sans', sans-serif;
+    --color-fonts: #fff;
+}
+
+/* custom scroll bar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #dadada;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(221, 155, 33);
+    border-radius: 50px;
+}
+
+
+body {
+    background: linear-gradient(45deg, #073b39, #00061f,#27615f);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes animColo {
+    0% {
+    background: linear-gradient(40deg, #073b39 0%, #00061f 80%);
+    }
+
+    100% {
+    background: linear-gradient(40deg, #16726f 0%, #000414 80%);
+    }
+}
+
+p,h1,h2,h3,h4 {
+    color: var(--color-fonts);
+}
+
+h2,h3,h4 {
+    font-family: var(--title-fonts);
+}
+
+h3 {
+    margin: 60px 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-family: var(--logo-fonts);
+}
+
+h4 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+
+.chose {
+    text-align: center;
+    font-family: var(--logo-fonts);
+    text-transform: uppercase;
+    line-height: 75px;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 100px;
+    
+}
+
+.chose span {
+    font-size: 75px;
+}
+
+
+
+.main-descrip {
+    font-family: var(--para-fonts);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content {
+  width: 75%;
+  margin: 80px auto;
+}
+
+header {
+    height: 100vh;
+}
+
+/* Barre de recherche champion */
+.search-champ {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.search-champ input, button {
+    border: none;
+    padding: 20px;
+
+}
+
+.search-champ input {
+    width: 70%;
+    font-size: 18px;
+    text-align: center;
+    color: var(--color-fonts);
+    border-radius: 5px 0px 0px 5px ;
+    background: rgb(0,1,25);
+    background: linear-gradient(0deg, rgb(0, 1, 19) 0%, rgba(0,0,0,1) 100%);
+    border-left: 2px solid rgb(167, 120, 38);
+    border-top:  2px solid rgb(182, 127, 32);
+    border-bottom: 2px solid rgb(226, 162, 52);
+}
+
+.search-champ input:focus {
+    background: rgb(56,57,110);
+    background: linear-gradient(0deg, rgb(17, 17, 46) 0%, rgba(0,0,0,1) 100%);
+}
+
+.search-champ button {
+    background: linear-gradient(0deg, rgba(254,184,66,1) 0%, rgba(182,125,26,1) 100%);
+    color: var(--color-fonts);
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 0px 5px 5px 0px ;
+
+}
+
+#error-champ {
+    display: none;
+    width: max-content;
+    background-color: rgb(250, 134, 134);
+    margin: 10px auto;
+    padding: 15px;
+    color: rgb(184, 5, 5);
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+
+
+/* Carte champion */
+.container-pres {
+    margin-bottom: 200px;
+}
+.card-champ {
+    width: fit-content;
+    margin: 130px auto;
+}
+
+.card-champ:hover #icon-champ {
+    box-shadow: rgb(0, 54, 54) 0 0 20px;
+
+}
+
+#icon-champ {
+    display: inherit;
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+    transition-duration: .4s;
+}
+
+#name-champ {
+    margin-bottom: 3px;
+    text-align: center;
+    font-family: var(--para-fonts);
+}
+
+blockquote {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+#descrip-champ {  
+    
+    width: 85%;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 30px;
+    font-family: var(--para-fonts);
+    
+}
+
+.divider {
+    width: 90px;
+    height: 3px;
+    background: rgb(254,184,66);
+    background: linear-gradient(0deg, rgba(254,184,66,1) 0%, #b67d1a 100%);
+    margin: 100px auto;
+    border-radius: 32px;
+}
+
+/* Compétences */
+.container-comp {
+    margin-bottom: 200px;
+}
+.list-skill {
+    margin-top: 20px;
+}
+
+.list-skill li {
+    width: 100%;
+    margin-bottom: 70px;
+    padding: 20px;
+    color: #fff;
+    font-family: var(--para-fonts);
+    font-size: 18px;
+    background: rgba(172, 110, 2, 0.048);
+    border: 3px solid rgb(230, 170, 68);
+    border-radius: 10px;
+    list-style: none;
+    transition-duration: .6s;
+}
+
+.list-skill li:last-child {
+    background: linear-gradient(0deg, rgb(161, 113, 29) 0%, rgb(230, 170, 68) 100%);
+    box-shadow: 0 0 15px goldenrod;
+    border: none;
+
+}
+
+
+
+.list-skill li p {
+    padding-right: 20%;
+}
+
+
+/* Conseils pour le champion ou contre le champion */
+.container-tips ul {
+    list-style: none;
+}
+
+.container-tips ul li {
+    font-size: 18px;
+    color: var(--color-fonts);
+    font-family: var(--para-fonts);
+    margin-top: 20px;
+    width: 75%;
+}
+
+.container-tips h3 {
+    margin-top: 90px;
+}
+
+
+
+
+
+
+
+footer {
+    height: 300px;
+    margin-top: 250px;
+    background-color: rgb(0, 6, 17);
+}
+
+.copy-riot {
+   
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 250px;
+    font-family: var(--para-fonts);
+}
+
+
+
+.copy-riot a {
+    color: #fff;
+}
+
+@media screen and (max-width: 750px) {
+    .chose {
+        line-height: 55px;
+    }
+    
+    .chose span {
+        font-size: 50px;
+    }
+
+    .search-champ input, button {
+        padding: 10px;
+    }
+
+    .main-descrip {
+        font-size: 16px;
+    }
+
+    #icon-champ {
+        width: 90px;
+        height: 90px;
+    }
+
+    #name-champ {
+        font-size: 22px;
+    }
+
+    
+}
